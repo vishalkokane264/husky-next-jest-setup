@@ -12,5 +12,5 @@ module.exports = {
   coverageDirectory: "coverage", // Output folder for coverage reports
   coverageReporters: ["json", "text", "lcov"], // Generates coverage reports
   testEnvironment: "jsdom", // Required for testing React components
-  moduleFileExtensions: ["js", "ts"],
+  moduleFileExtensions: ["js", "ts", "jsx", "tsx", "json"],
 };
