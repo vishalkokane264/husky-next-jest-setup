@@ -1,12 +1,16 @@
 module.exports = {
-  collectCoverage: true, // Enable coverage collection
+  collectCoverage: true, // Enables coverage collection
+  collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}"], // Specifies files to collect coverage from
   coverageThreshold: {
     global: {
-      lines: 10, // Minimum 10% line coverage required
+      lines: 50, // Minimum 50% line coverage required
+      statements: 50,
+      branches: 50,
+      functions: 50,
     },
   },
   coverageDirectory: "coverage", // Output folder for coverage reports
-  testEnvironment: "jsdom", // Needed for React testing
-  moduleFileExtensions: ["js"], // Recognize JS and JSX files
-  testMatch: ["**/__tests__/**/*.[jt]s", "**/?(*.)+(spec|test).[tj]s"], // Test file patterns
+  coverageReporters: ["json", "text", "lcov"], // Generates coverage reports
+  testEnvironment: "jsdom", // Required for testing React components
+  moduleFileExtensions: ["js", "ts"],
 };
